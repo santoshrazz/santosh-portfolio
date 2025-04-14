@@ -8,7 +8,7 @@ import ParticleBackground from "@/components/Particle-moving";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio | Full Stack Developer",
+  title: "Portfolio | Full Stack Developer | Software Engineer",
   description: "Personal portfolio website showcasing full stack development projects and skills",
   icons: {
     icon: "/favicon.ico",

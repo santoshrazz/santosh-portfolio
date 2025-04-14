@@ -22,17 +22,17 @@ export async function generateMetadata() {
   return {
     title: `Santosh Kumar | Portfolio`,
     description:
-      "Portfolio Website of Santoshrazz . software engineer in india . full stack developer in india ",
+      "Santosh Kumar – Full Stack Developer with expertise in Next.js, Node.js, Express, MongoDB, and MySQL. View projects showcasing scalable web apps, clean UI/UX, and powerful backend solutions. Hire a developer who builds end-to-end digital experiences.",
     alternates: {
-      canonical: "https://santoshmanav.site/",
-      url: "https://santoshmanav.site/",
+      canonical: "https://santoshmanav.site",
+      url: "https://santoshmanav.site",
     },
     openGraph: {
       title: `Santosh Kumar | Portfolio`,
       description:
-        "Portfolio Website of Santoshrazz . software engineer in india . full stack developer in india ",
-      url: "https://santoshmanav.site/",
-      siteName: "https://santoshmanav.site/",
+        "Santosh Kumar – Full Stack Developer with expertise in Next.js, Node.js, Express, MongoDB, and MySQL. View projects showcasing scalable web apps, clean UI/UX, and powerful backend solutions. Hire a developer who builds end-to-end digital experiences.",
+      url: "https://santoshmanav.site",
+      siteName: "https://santoshmanav.site",
       images: [
         {
           url: "/Profile.jpg",
@@ -45,9 +45,9 @@ export async function generateMetadata() {
       type: "website",
     },
     twitter: {
-      card: "https://santoshmanav.site/",
+      card: "https://santoshmanav.site",
       title: `Santosh Kumar | Portfolio`,
-      description: "Play Different Type of Quiz From different Topics With different types of Mode Like Dino Mode.",
+      description: "Santosh Kumar – Full Stack Developer with expertise in Next.js, Node.js, Express, MongoDB, and MySQL. View projects showcasing scalable web apps, clean UI/UX, and powerful backend solutions. Hire a developer who builds end-to-end digital experiences.",
       creator: `Santosh Kumar`,
       images: [`/Profile.jpg`],
     },
@@ -64,6 +64,6 @@ export async function generateMetadata() {
         "max-snippet": -1,
       },
     },
-    metadataBase: `https://santoshmanav.site/`,
+    metadataBase: `https://santoshmanav.site`,
   };
 }
