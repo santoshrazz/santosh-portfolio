@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CalendarIcon, Clock, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const blogs = [
   {
@@ -58,10 +59,12 @@ export function LatestBlogs() {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold tracking-tight">Latest Articles</h2>
-          <Button variant="ghost" className="group">
-            Explore all blogs
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link href={"/blog"}>
+            <Button variant="ghost" className="group">
+              Explore all blogs
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

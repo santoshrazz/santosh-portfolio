@@ -3,6 +3,8 @@ import { ThemeProvider } from "@/components/Theme-provider";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import ParticleBackground from "@/components/Particle-moving";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +21,8 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <ParticleBackground />
+          <Navbar />
           {children}
           <Toaster toastOptions={{ duration: 4000 }} />
         </ThemeProvider>

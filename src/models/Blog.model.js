@@ -7,7 +7,19 @@ const blogSchema = new Schema({
     },
     description: {
         type: String,
-        required: [true, "Blog Schema is required"]
+        required: [true, "Blog description is required"]
+    },
+    thumbnail: {
+        type: String,
+        required: [true, "Blog thumbnail is required"]
+    },
+    tags: {
+        type: [String]
+    },
+    category: {
+        type: String
     }
+}, {
+    timestamps: true
 })
-// const blogModel = mongoose.Schema.modmongoose.model('')
+export const blogModel = mongoose.models.Blog || mongoose.model("Blog", blogSchema)

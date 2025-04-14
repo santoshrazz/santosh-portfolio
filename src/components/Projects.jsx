@@ -12,13 +12,12 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "Web Scrapper",
-    description:
-      "A web scrapper that collect product info from amazon by a given link",
+    title: "TNG App Backend",
+    description: "A full customize backend for TNG mobile app",
     image: "/WebScrapper.jpg",
-    github: "https://github.com/santoshrazz/webscrapper",
+    github: "https://github.com/santoshrazz/subhamApp",
     demo: "https://webscrapper-gray.vercel.app/",
-    tags: ["Next.js", "TypeScript", "Cherio", "Tailwind CSS"],
+    tags: ["Node.js", "Express.js", "Cloudinery", "Docker"],
   },
   {
     title: "Coursera ",

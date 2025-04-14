@@ -13,23 +13,38 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
+    phone: "",
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    toast.success("Your response Submitted SuccessFully");
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+    try {
+      const { data } = await axios.post("/api/contact", formData);
+      if (!data) {
+        return toast.error("Some Error Occured");
+      }
+      return toast.success(
+        data?.message || "Your response Submitted SuccessFully"
+      );
+    } catch (error) {
+      toast.error(
+        error?.response?.data?.message || "Error Submitting your request"
+      );
+    } finally {
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+        phone: "",
+      });
+    }
   };
 
   return (
@@ -67,6 +82,16 @@ export default function Contact() {
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
+                  }
+                />
+              </div>
+              <div>
+                <Input
+                  type="phone"
+                  placeholder="Your Phone Number"
+                  value={formData.phone}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone: e.target.value })
                   }
                 />
               </div>

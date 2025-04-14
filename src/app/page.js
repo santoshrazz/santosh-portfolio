@@ -1,17 +1,13 @@
-import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import Technology from "@/components/Technology"
 import Projects from "@/components/Projects"
 import Contact from "@/components/Contact"
-import ParticleBackground from "@/components/Particle-moving"
 import Skills from "@/components/Skills"
 import { LatestBlogs } from "@/components/Latest_Blog"
+export default async function Home() {
 
-export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <ParticleBackground />
-      <Navbar />
       <Hero />
       <Skills />
       <LatestBlogs />
@@ -28,15 +24,15 @@ export async function generateMetadata() {
     description:
       "Portfolio Website of Santoshrazz . software engineer in india . full stack developer in india ",
     alternates: {
-      canonical: "https://github.com/santoshrazz",
-      url: "https://github.com/santoshrazz",
+      canonical: "https://santoshmanav.site/",
+      url: "https://santoshmanav.site/",
     },
     openGraph: {
       title: `Santosh Kumar | Portfolio`,
       description:
         "Portfolio Website of Santoshrazz . software engineer in india . full stack developer in india ",
-      url: "https://github.com/santoshrazz",
-      siteName: "https://github.com/santoshrazz",
+      url: "https://santoshmanav.site/",
+      siteName: "https://santoshmanav.site/",
       images: [
         {
           url: "/Profile.jpg",
@@ -49,7 +45,7 @@ export async function generateMetadata() {
       type: "website",
     },
     twitter: {
-      card: "https://github.com/santoshrazz",
+      card: "https://santoshmanav.site/",
       title: `Santosh Kumar | Portfolio`,
       description: "Play Different Type of Quiz From different Topics With different types of Mode Like Dino Mode.",
       creator: `Santosh Kumar`,
@@ -68,6 +64,6 @@ export async function generateMetadata() {
         "max-snippet": -1,
       },
     },
-    metadataBase: `https://github.com/santoshrazz`,
+    metadataBase: `https://santoshmanav.site/`,
   };
 }

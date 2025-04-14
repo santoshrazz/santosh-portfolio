@@ -67,8 +67,6 @@
   animation: float 3s ease-in-out infinite;
 }
 
-
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -76,4 +74,25 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.ProseMirror {
+  min-height: 200px;
+  outline: none !important;
+}
+
+.ProseMirror:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* Ensure editor takes full height */
+.tiptap {
+  height: 100%;
+}
+
+/* Improve spacing for content */
+.ProseMirror p {
+  margin-bottom: 1em;
 }
