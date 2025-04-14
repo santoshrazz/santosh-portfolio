@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { fetchAllBlogs } from "@/app/api/services";
 import AllBlog from "@/components/blogs/AllBlog";
 import React from "react";
