@@ -7,7 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { formatDateTime } from "@/constants";
 import { CalendarIcon, Clock, ArrowRight } from "lucide-react";
+import parse from "html-react-parser";
 import Link from "next/link";
 
 const blogs = [
@@ -53,7 +55,7 @@ const blogs = [
   },
 ];
 
-export function LatestBlogs() {
+export function LatestBlogs({ trendingBlogData }) {
   return (
     <section className="py-12 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -68,15 +70,15 @@ export function LatestBlogs() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {blogs.map((blog) => (
+          {trendingBlogData?.blog.map((blog) => (
             <Card
-              key={blog.id}
+              key={blog._id}
               className="group hover:shadow-lg transition-shadow duration-200"
             >
               <CardHeader className="p-0">
                 <div className="aspect-video w-full overflow-hidden rounded-t-lg">
                   <img
-                    src={blog.image}
+                    src={blog.thumbnail}
                     alt={blog.title}
                     className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
                   />
@@ -86,24 +88,28 @@ export function LatestBlogs() {
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                   <div className="flex items-center">
                     <CalendarIcon className="mr-1 h-4 w-4" />
-                    {blog.date}
+                    {/* {blog.date} */}
+                    {formatDateTime(blog.createdAt)}
                   </div>
                   <div className="flex items-center">
                     <Clock className="mr-1 h-4 w-4" />
-                    {blog.readTime}
+                    {/* {blog.readTime} */}
+                    {"10 Min"}
                   </div>
                 </div>
                 <CardTitle className="line-clamp-2 mb-2 hover:text-primary cursor-pointer">
-                  {blog.title}
+                  <Link href={`/blog/${blog?._id}`}>{blog.title}</Link>
                 </CardTitle>
                 <CardDescription className="line-clamp-2">
-                  {blog.description}
+                  {parse(blog.description)}
                 </CardDescription>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Button variant="link" className="px-0 text-primary">
-                  Read more
-                </Button>
+                <Link href={`/blog/${blog._id}`}>
+                  <Button variant="link" className="px-0 text-primary">
+                    Read more
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}

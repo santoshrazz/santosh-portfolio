@@ -52,7 +52,7 @@ export async function generateMetadata({ params }) {
         data?.blog?.description ||
         `Read Santosh Kumar’s personal blog on full stack development, covering topics like Next.js, Node.js, MongoDB, MySQL, and modern web dev trends. Learn from tutorials, tips, and real-world coding insights shared by an experienced developer.`,
       creator: `Santosh Kumar`,
-      images: [`/Profile.jpg`],
+      images: [data?.blog?.thumbnail],
     },
     robots: {
       index: false,

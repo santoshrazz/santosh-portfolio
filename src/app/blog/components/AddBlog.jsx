@@ -119,6 +119,7 @@ export default function AddBlog() {
         category,
       };
       const { data } = await axios.post("/api/blog", dataToSend);
+      console.log("data", data);
       if (data?.success) {
         toast.success("Blog Added SuccessFully");
         setTitle("");

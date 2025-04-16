@@ -4,13 +4,14 @@ import Projects from "@/components/Projects"
 import Contact from "@/components/Contact"
 import Skills from "@/components/Skills"
 import { LatestBlogs } from "@/components/Latest_Blog"
+import { getTrendingBlog } from "./api/services"
 export default async function Home() {
-
+  const { data: trendingBlogData } = await getTrendingBlog();
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Hero />
       <Skills />
-      <LatestBlogs />
+      <LatestBlogs trendingBlogData={trendingBlogData} />
       <Technology />
       <Projects />
       <Contact />
