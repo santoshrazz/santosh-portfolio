@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import {
+  Facebook,
+  Github,
+  Instagram,
+  Linkedin,
+  Mail,
+  Send,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -125,6 +132,26 @@ export default function Contact() {
               <a href="mailto:santoshrajbgp11@gmail.com">
                 <Mail className="w-4 h-4 mr-2" />
                 santoshrajbgp11@gmail.com
+              </a>
+            </Button>
+            <Button variant="outline" className="w-full" asChild>
+              <a
+                href="https://www.facebook.com/profile.php?id=100064916148016"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook className="w-4 h-4 mr-2" />
+                Facebook
+              </a>
+            </Button>
+            <Button variant="outline" className="w-full" asChild>
+              <a
+                href="https://www.instagram.com/__raj_yadav_6204/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="w-4 h-4 mr-2" />
+                Instagram
               </a>
             </Button>
             <Button variant="outline" className="w-full" asChild>

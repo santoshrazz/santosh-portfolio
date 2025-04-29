@@ -8,7 +8,7 @@ export const connectToDb = async () => {
             return
         }
         if (isConnected) {
-            return console.log("using already connected db instance")
+            return
         }
         const connection = await mongoose.connect(connectionString)
         isConnected = connection.connection.readyState === 1

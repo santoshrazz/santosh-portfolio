@@ -1,15 +1,53 @@
 import { fetchSingleBlog } from "@/app/api/services";
 import BlogDetails from "@/components/blogs/BlogDetails";
+import { formatDateToYYYYMMDD } from "@/constants";
+import Head from "next/head";
 import React from "react";
 
 const page = async ({ params }) => {
   await params;
   const { id } = await params;
   const { data, error } = await fetchSingleBlog({ blogId: id });
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": data?.blog.title,
+    "description": data?.blog.description,
+    "image": data?.blog.thumbnail,
+    "author": {
+      "@type": "Person",
+      "name": "Santosh Kumar",
+      "url": "https://santoshmanav.site",
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Santosh Kumar",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.santoshmanav.site/Profile.jpg",
+      },
+    },
+    "datePublished": formatDateToYYYYMMDD(data?.blog.createdAt),
+    "dateModified": formatDateToYYYYMMDD(data?.blog.updatedAt),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://santoshmanav.site/blog/${data?.blog?._id}`,
+    },
+  };
+
   return (
-    <div>
-      <BlogDetails blog={data.blog} />
-    </div>
+    <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </Head>
+      <div>
+        <BlogDetails blog={data.blog} />
+      </div>
+    </>
   );
 };
 
@@ -24,16 +62,16 @@ export async function generateMetadata({ params }) {
       data?.blog?.description ||
       `Read Santosh Kumar’s personal blog on full stack development, covering topics like Next.js, Node.js, MongoDB, MySQL, and modern web dev trends. Learn from tutorials, tips, and real-world coding insights shared by an experienced developer.`,
     alternates: {
-      canonical: "https://santoshmanav.site",
-      url: "https://santoshmanav.site",
+      canonical: `https://santoshmanav.site/blog${data?.blog?._id}`,
+      url: `https://santoshmanav.site/blog${data?.blog?._id}`,
     },
     openGraph: {
       title: data?.blog?.title || `Santosh Raaz Blog`,
       description:
         data?.blog?.description ||
         `Read Santosh Kumar’s personal blog on full stack development, covering topics like Next.js, Node.js, MongoDB, MySQL, and modern web dev trends. Learn from tutorials, tips, and real-world coding insights shared by an experienced developer.`,
-      url: "https://santoshmanav.site",
-      siteName: "https://santoshmanav.site",
+      url: `https://santoshmanav.site/blog${data?.blog?._id}`,
+      siteName: `https://santoshmanav.site/blog${data?.blog?._id}`,
       images: [
         {
           url: "/Profile.jpg",
@@ -46,7 +84,7 @@ export async function generateMetadata({ params }) {
       type: "website",
     },
     twitter: {
-      card: "https://santoshmanav.site",
+      card: `https://santoshmanav.site/blog${data?.blog?._id}`,
       title: data?.blog?.title || `Santosh Raaz Blog`,
       description:
         data?.blog?.description ||
@@ -55,7 +93,7 @@ export async function generateMetadata({ params }) {
       images: [data?.blog?.thumbnail],
     },
     robots: {
-      index: false,
+      index: true,
       follow: true,
       nocache: true,
       googleBot: {

@@ -8,14 +8,16 @@ import { getTrendingBlog } from "./api/services"
 export default async function Home() {
   const { data: trendingBlogData } = await getTrendingBlog();
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <Hero />
-      <Skills />
-      <LatestBlogs trendingBlogData={trendingBlogData} />
-      <Technology />
-      <Projects />
-      <Contact />
-    </main>
+    <>
+      <main className="min-h-screen bg-background text-foreground">
+        <Hero />
+        <Skills />
+        <LatestBlogs trendingBlogData={trendingBlogData} />
+        <Technology />
+        <Projects />
+        <Contact />
+      </main>
+    </>
   )
 }
 

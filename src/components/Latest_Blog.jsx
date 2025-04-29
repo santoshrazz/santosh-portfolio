@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -56,6 +57,8 @@ const blogs = [
 ];
 
 export function LatestBlogs({ trendingBlogData }) {
+  // console.log("trendingBlog", trendingBlogData);
+  const AllBlogs = trendingBlogData?.blog;
   return (
     <section className="py-12 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -70,7 +73,7 @@ export function LatestBlogs({ trendingBlogData }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {trendingBlogData?.blog.map((blog) => (
+          {AllBlogs.map((blog) => (
             <Card
               key={blog._id}
               className="group hover:shadow-lg transition-shadow duration-200"
