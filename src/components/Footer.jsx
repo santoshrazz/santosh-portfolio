@@ -15,7 +15,8 @@ const Footer = () => {
                 <span className="font-bold text-xl">Santosh Kumar</span>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                My goal is to reach to the closest to you.
+                Designed & developed by Santosh Kumar — Full Stack Developer &
+                Software Engineer.
               </p>
               <div className="flex space-x-4">
                 <Link
@@ -73,7 +74,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/privacy"
-                    className="text-purple-600 dark:text-purple-400 hover:underline"
+                    className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
                   >
                     Privacy Policy
                   </Link>

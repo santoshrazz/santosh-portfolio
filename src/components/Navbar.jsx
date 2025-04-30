@@ -104,9 +104,11 @@ export default function Navbar() {
 
   const handleLogOut = () => {
     signOut({ callbackUrl: "/", redirect: true });
+    setIsOpen(false);
   };
   const goToLogin = () => {
     nav.push("/login");
+    setIsOpen(false);
   };
   return (
     <nav className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md border-b border-gray-200 dark:border-gray-700">
