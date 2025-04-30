@@ -18,32 +18,31 @@ export async function generateMetadata() {
       "Create your Santosh Kumar account to access exclusive full stack development tutorials, save coding resources, and stay updated on Next.js, Node.js, MongoDB, MySQL, and modern web development insights.",
     alternates: {
       canonical: "https://santoshmanav.site/register",
-      url: "https://santoshmanav.site/register",
     },
     openGraph: {
       title: `Santosh Kumar | Register`,
       description:
         "Create your Santosh Kumar account to access exclusive full stack development tutorials, save coding resources, and stay updated on Next.js, Node.js, MongoDB, MySQL, and modern web development insights.",
       url: "https://santoshmanav.site/register",
-      siteName: "https://santoshmanav.site/register",
+      siteName: "Santosh Kumar",
       images: [
         {
-          url: "/Profile.jpg",
+          url: "https://santoshmanav.site/Profile.jpg",
           width: 800,
           height: 600,
-          alt: `Profile logo`,
+          alt: `Santosh Kumar`,
         },
       ],
       locale: "en_US",
       type: "website",
     },
     twitter: {
-      card: "https://santoshmanav.site/register",
+      card: "summary_large_image",
       title: `Santosh Kumar | Register`,
       description:
         "Login to Santosh Kumar’s full stack development blog to access exclusive tutorials, coding tips, and insights on Next.js, Node.js, MongoDB, MySQL, and modern web technologies. Stay updated with the best practices in full stack and web development.",
       creator: `Santosh Kumar`,
-      images: [`/Profile.jpg`],
+      images: [`https://santoshmanav.site/Profile.jpg`],
     },
     robots: {
       index: true,
@@ -58,6 +57,6 @@ export async function generateMetadata() {
         "max-snippet": -1,
       },
     },
-    metadataBase: `https://santoshmanav.site/register`,
+    metadataBase: new URL("https://santoshmanav.site"),
   };
 }

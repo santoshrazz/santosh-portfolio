@@ -17,32 +17,31 @@ export async function generateMetadata() {
       "Contact Santosh Kumar, a full stack developer specializing in Next.js, Node.js, MongoDB, and MySQL. For project inquiries, collaborations, or technical support, use the contact form to connect directly. Stay engaged with the latest trends in full stack web development.",
     alternates: {
       canonical: "https://santoshmanav.site/contact",
-      url: "https://santoshmanav.site/contact",
     },
     openGraph: {
       title: `Santosh Kumar | Contact`,
       description:
         "Contact Santosh Kumar, a full stack developer specializing in Next.js, Node.js, MongoDB, and MySQL. For project inquiries, collaborations, or technical support, use the contact form to connect directly. Stay engaged with the latest trends in full stack web development.",
       url: "https://santoshmanav.site/contact",
-      siteName: "https://santoshmanav.site/contact",
+      siteName: "Santosh Kumar",
       images: [
         {
-          url: "/Profile.jpg",
+          url: "https://santoshmanav.site/Profile.jpg",
           width: 800,
           height: 600,
-          alt: `Profile logo`,
+          alt: `Santosh Kumar`,
         },
       ],
       locale: "en_US",
       type: "website",
     },
     twitter: {
-      card: "https://santoshmanav.site/contact",
+      card: "summary_large_image",
       title: `Santosh Kumar | Contact`,
       description:
         "Contact Santosh Kumar, a full stack developer specializing in Next.js, Node.js, MongoDB, and MySQL. For project inquiries, collaborations, or technical support, use the contact form to connect directly. Stay engaged with the latest trends in full stack web development.",
       creator: `Santosh Kumar`,
-      images: [`/Profile.jpg`],
+      images: [`https://santoshmanav.site/Profile.jpg`],
     },
     robots: {
       index: true,
@@ -57,6 +56,6 @@ export async function generateMetadata() {
         "max-snippet": -1,
       },
     },
-    metadataBase: `https://santoshmanav.site/contact`,
+    metadataBase: new URL("https://santoshmanav.site"),
   };
 }

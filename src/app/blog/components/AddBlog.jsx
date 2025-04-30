@@ -73,7 +73,6 @@ export default function AddBlog() {
         const formData = new FormData();
         formData.append("file", file);
         const { data } = await axios.post("/api/upload", formData);
-        console.log("data", data);
         if (data?.success) {
           setmainThumbnail(data?.imageUrl);
         } else if (!data?.success) {
@@ -101,7 +100,6 @@ export default function AddBlog() {
       formData.append("file", file);
       try {
         const { data } = await axios.post("/api/upload", formData);
-        console.log("data", data);
         if (data?.success) {
           editor.chain().focus().setImage({ src: data?.imageUrl }).run();
         }
@@ -119,7 +117,6 @@ export default function AddBlog() {
         category,
       };
       const { data } = await axios.post("/api/blog", dataToSend);
-      console.log("data", data);
       if (data?.success) {
         toast.success("Blog Added SuccessFully");
         setTitle("");
@@ -132,7 +129,6 @@ export default function AddBlog() {
         toast.error(data.message || "Error while adding blog");
       }
     } catch (error) {
-      console.log("error", error);
       toast.error("Error while adding blog");
     }
   };

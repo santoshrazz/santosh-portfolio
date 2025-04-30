@@ -19,32 +19,31 @@ export async function generateMetadata() {
             "Read Santosh Kumar’s Privacy Policy to understand how we collect, use, and protect your data. Committed to transparency and security for all users exploring full stack development tutorials, tips, and web dev content.",
         alternates: {
             canonical: "https://santoshmanav.site/privacy",
-            url: "https://santoshmanav.site/privacy",
         },
         openGraph: {
             title: `Santosh Kumar | Privacy`,
             description:
                 "Read Santosh Kumar’s Privacy Policy to understand how we collect, use, and protect your data. Committed to transparency and security for all users exploring full stack development tutorials, tips, and web dev content.",
             url: "https://santoshmanav.site/privacy",
-            siteName: "https://santoshmanav.site/privacy",
+            siteName: "Santosh Kumar",
             images: [
                 {
-                    url: "/Profile.jpg",
+                    url: "https://santoshmanav.site/Profile.jpg",
                     width: 800,
                     height: 600,
-                    alt: `Profile logo`,
+                    alt: `Santosh Kumar`,
                 },
             ],
             locale: "en_US",
             type: "website",
         },
         twitter: {
-            card: "https://santoshmanav.site/privacy",
+            card: "summary_large_image",
             title: `Santosh Kumar | Privacy`,
             description:
                 "Login to Santosh Kumar’s full stack development blog to access exclusive tutorials, coding tips, and insights on Next.js, Node.js, MongoDB, MySQL, and modern web technologies. Stay updated with the best practices in full stack and web development.",
             creator: `Santosh Kumar`,
-            images: [`/Profile.jpg`],
+            images: [`https://santoshmanav.site/Profile.jpg`],
         },
         robots: {
             index: true,
@@ -59,6 +58,6 @@ export async function generateMetadata() {
                 "max-snippet": -1,
             },
         },
-        metadataBase: `https://santoshmanav.site/privacy`,
+        metadataBase: new URL("https://santoshmanav.site"),
     };
 }

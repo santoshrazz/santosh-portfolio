@@ -20,33 +20,32 @@ export async function generateMetadata() {
     description:
       "Read Santosh Kumar’s personal blog on full stack development, covering topics like Next.js, Node.js, MongoDB, MySQL, and modern web dev trends. Learn from tutorials, tips, and real-world coding insights shared by an experienced developer.",
     alternates: {
-      canonical: "https://santoshmanav.site",
-      url: "https://santoshmanav.site",
+      canonical: "https://santoshmanav.site/blog",
     },
     openGraph: {
-      title: `Santosh Kumar | Portfolio`,
+      title: `Santosh Kumar | Blog`,
       description:
         "Read Santosh Kumar’s personal blog on full stack development, covering topics like Next.js, Node.js, MongoDB, MySQL, and modern web dev trends. Learn from tutorials, tips, and real-world coding insights shared by an experienced developer.",
-      url: "https://santoshmanav.site",
-      siteName: "https://santoshmanav.site",
+      url: "https://santoshmanav.site/blog",
+      siteName: "Santosh Kumar",
       images: [
         {
-          url: "/Profile.jpg",
+          url: "https://santoshmanav.site/Profile.jpg",
           width: 800,
           height: 600,
-          alt: `Profile logo`,
+          alt: `Santosh Kumar`,
         },
       ],
       locale: "en_US",
       type: "website",
     },
     twitter: {
-      card: "https://santoshmanav.site",
-      title: `Santosh Kumar | Portfolio`,
+      card: "summary_large_image",
+      title: `Santosh Kumar | Blog`,
       description:
         "Read Santosh Kumar’s personal blog on full stack development, covering topics like Next.js, Node.js, MongoDB, MySQL, and modern web dev trends. Learn from tutorials, tips, and real-world coding insights shared by an experienced developer.",
       creator: `Santosh Kumar`,
-      images: [`/Profile.jpg`],
+      images: [`https://santoshmanav.site/Profile.jpg`],
     },
     robots: {
       index: true,
@@ -54,13 +53,13 @@ export async function generateMetadata() {
       nocache: true,
       googleBot: {
         index: true,
-        follow: false,
+        follow: true,
         noimageindex: true,
         "max-video-preview": -1,
         "max-image-preview": "large",
         "max-snippet": -1,
       },
     },
-    metadataBase: `https://santoshmanav.site`,
+    metadataBase: new URL("https://santoshmanav.site"),
   };
 }
