@@ -220,10 +220,7 @@ export default function Navbar() {
               ))}
               <motion.div variants={mobileItemVariants}>
                 <button
-                  onClick={() => {
-                    toggleLogin();
-                    setIsOpen(false);
-                  }}
+                  onClick={isLoggedIn ? handleLogOut : goToLogin}
                   className="w-full mt-2 px-4 py-2 rounded-md bg-gradient-to-r from-purple-500 to-pink-500 text-white flex items-center justify-center text-base font-medium"
                 >
                   {isLoggedIn ? (

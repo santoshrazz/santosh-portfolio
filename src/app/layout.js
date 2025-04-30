@@ -12,8 +12,17 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Portfolio | Full Stack Developer | Software Engineer",
   description: "Personal portfolio website showcasing full stack development projects and skills",
+  themeColor: "#111827",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" }, // Default favicon
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+    ],
+    shortcut: "/favicon.ico",
   },
 };
 

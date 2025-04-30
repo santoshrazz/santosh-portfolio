@@ -11,6 +11,18 @@ export default async function sitemap() {
 
     return [
         {
+            url: `${process.env.NEXT_PUBLIC_BASE_LIVE_URL}/`,
+            lastModified: new Date(),
+        },
+        {
+            url: `${process.env.NEXT_PUBLIC_BASE_LIVE_URL}/register`,
+            lastModified: new Date(),
+        },
+        {
+            url: `${process.env.NEXT_PUBLIC_BASE_LIVE_URL}/login`,
+            lastModified: new Date(),
+        },
+        {
             url: `${process.env.NEXT_PUBLIC_BASE_LIVE_URL}/contact`,
             lastModified: new Date(),
         },
