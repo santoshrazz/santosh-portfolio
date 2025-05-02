@@ -68,9 +68,10 @@ function BlogDetails({ blog }) {
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
             {blog.excerpt}
           </p>
-          <div className="text-gray-300 text-lg leading-relaxed mb-6">
-            {parse(blog.description)}
-          </div>
+          <div
+            className="text-gray-300 text-lg leading-relaxed mb-6 prose prose-xl dark:prose-invert"
+            dangerouslySetInnerHTML={{ __html: blog.description }}
+          ></div>
         </div>
       </article>
     </div>

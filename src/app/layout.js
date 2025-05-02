@@ -9,10 +9,12 @@ import Head from "next/head";
 import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport = {
+  themeColor: "#ffffff",
+};
 export const metadata = {
   title: "Portfolio | Full Stack Developer | Software Engineer",
   description: "Personal portfolio website showcasing full stack development projects and skills",
-  themeColor: "#111827",
   icons: {
     icon: [
       { url: "/favicon.ico" }, // Default favicon
