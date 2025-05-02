@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const viewport = {
-  themeColor: "#ffffff",
+  themeColor: "#111827",
 };
 export const metadata = {
   title: "Portfolio | Full Stack Developer | Software Engineer",
