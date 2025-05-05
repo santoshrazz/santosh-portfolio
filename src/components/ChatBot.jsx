@@ -79,7 +79,7 @@ const ChatBot = () => {
             src={robotImage}
             width={100}
             height={100}
-            alt="bot-image"
+            alt="Santosh Kumar"
             className="rounded-full"
             unoptimized
           />

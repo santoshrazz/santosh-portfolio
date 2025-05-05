@@ -333,7 +333,7 @@ export default function AddBlog() {
                   <div className="relative mt-2 w-full max-w-xs">
                     <img
                       src={thumbnail || "/placeholder.svg"}
-                      alt="Thumbnail preview"
+                      alt="Santosh Kumar"
                       className="rounded-md max-h-40 object-cover"
                     />
                     <Button

@@ -137,50 +137,8 @@ export default function Login() {
     },
   };
 
-  const floatingCircleVariants = {
-    initial: (i) => ({
-      x: 0,
-      y: 0,
-      scale: 1,
-    }),
-    animate: (i) => ({
-      x: Math.sin(i * 0.5) * 30,
-      y: Math.cos(i * 0.5) * 30,
-      scale: 1 + Math.sin(i) * 0.2,
-      transition: {
-        duration: 4 + i * 2,
-        repeat: Number.POSITIVE_INFINITY,
-        repeatType: "reverse",
-        ease: "easeInOut",
-      },
-    }),
-  };
-
   return (
-    <div className="relative w-full max-w-md mx-auto">
-      {/* Animated background elements */}
-      {[1, 2, 3, 4, 5].map((i) => (
-        <motion.div
-          key={i}
-          custom={i}
-          variants={floatingCircleVariants}
-          initial="initial"
-          animate="animate"
-          className={`absolute rounded-full opacity-20 dark:opacity-10 ${
-            i % 2 === 0
-              ? "bg-gradient-to-r from-purple-300 to-pink-300 dark:from-purple-600 dark:to-pink-600"
-              : "bg-gradient-to-r from-blue-300 to-teal-300 dark:from-blue-600 dark:to-teal-600"
-          }`}
-          style={{
-            width: `${80 + i * 20}px`,
-            height: `${80 + i * 20}px`,
-            top: `${-40 + ((i * 15) % 80)}%`,
-            left: `${-20 + ((i * 20) % 140)}%`,
-            zIndex: 0,
-          }}
-        />
-      ))}
-
+    <div className="relative w-full max-w-md mx-auto overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

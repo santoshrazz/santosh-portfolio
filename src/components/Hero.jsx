@@ -50,7 +50,7 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-full border-2 border-[#FF1B8D] glow"></div>
             <Image
               src="/Profile.jpg"
-              alt="Avatar"
+              alt="Santosh Kumar"
               width={320}
               height={320}
               className="rounded-full float-animation"

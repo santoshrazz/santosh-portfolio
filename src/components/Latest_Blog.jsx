@@ -82,7 +82,7 @@ export function LatestBlogs({ trendingBlogData }) {
                 <div className="aspect-video w-full overflow-hidden rounded-t-lg">
                   <img
                     src={blog.thumbnail}
-                    alt={blog.title}
+                    alt={"Thumbnail"}
                     className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
                   />
                 </div>

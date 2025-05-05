@@ -62,18 +62,18 @@ export async function generateMetadata({ params }) {
       data?.blog?.description ||
       `Read Santosh Kumar’s personal blog on full stack development, covering topics like Next.js, Node.js, MongoDB, MySQL, and modern web dev trends. Learn from tutorials, tips, and real-world coding insights shared by an experienced developer.`,
     alternates: {
-      canonical: `https://santoshmanav.site/blog${data?.blog?._id}`,
+      canonical: `https://santoshmanav.site/blog/${data?.blog?._id}`,
     },
     openGraph: {
       title: data?.blog?.title || `Santosh Kumar Blog`,
       description:
         data?.blog?.description ||
         `Read Santosh Kumar’s personal blog on full stack development, covering topics like Next.js, Node.js, MongoDB, MySQL, and modern web dev trends. Learn from tutorials, tips, and real-world coding insights shared by an experienced developer.`,
-      url: `https://santoshmanav.site/blog${data?.blog?._id}`,
+      url: `https://santoshmanav.site/blog/${data?.blog?._id}`,
       siteName: `Santosh Kumar`,
       images: [
         {
-          url: "https://santoshmanav.site/Profile.jpg",
+          url: data?.blog?.thumbnail || "https://santoshmanav.site/Profile.jpg",
           width: 800,
           height: 600,
           alt: `Santosh Kumar`,

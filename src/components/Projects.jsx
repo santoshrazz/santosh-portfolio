@@ -24,7 +24,7 @@ const projects = [
     description:
       "A course Selling website for Students and teacher's . To buy and sell courses",
     image: "/Course.jpg",
-    github: "https://github.com",
+    github: "https://github.com/santoshrazz",
     demo: "https://demo.com",
     tags: ["Next.js", "Node.js", "Fastify", "Aws", "Mongodb", "CloudFront"],
   },
@@ -34,7 +34,7 @@ const projects = [
       "A modern portfolio website built with Next.js and Tailwind CSS.",
     image: "/Portfolio.jpg",
     github: "https://github.com/santoshrazz/portfolio",
-    demo: "https://demo.com",
+    demo: "https://santoshmanav.site",
     tags: ["Next.js", "Tailwind CSS", "TypeScript"],
   },
 ];
