@@ -7,6 +7,7 @@ import ParticleBackground from "@/components/Particle-moving";
 import AuthWrapper from "@/components/Wrapper/AuthWrapper";
 import Head from "next/head";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const viewport = {
@@ -57,6 +58,7 @@ export default function RootLayout({ children }) {
                 }
               ` }} />
       </Head>
+      <Script src="https://checkout.razorpay.com/v1/checkout.js" />
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <AuthWrapper>

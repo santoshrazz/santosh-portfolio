@@ -40,6 +40,14 @@ const auth = {
         }
     })
     ],
+    session: {
+        strategy: "jwt",
+    },
+    jwt: {
+        // ← this is the correct place for these two:
+        secret: process.env.AUTH_SECRET,
+        encryption: false
+    },
     secret: process.env.AUTH_SECRET,
     callbacks: {
         async signIn({ user, account }) {
@@ -57,6 +65,13 @@ const auth = {
                 providerId: user?.id,
             })
             return true;
+        },
+        async jwt({ token, user }) {
+            if (user) {
+                token.id = user.id;
+                token.email = user.email;
+            }
+            return token;
         },
         async session({ session }) {
             await connectToDb()

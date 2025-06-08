@@ -77,9 +77,9 @@ export default function Privacy() {
         <p class="mb-4">We collect several types of information from and about users of our Services, including:</p>
         <ul class="list-disc pl-6 mb-4 space-y-2">
           <li><strong>Personal Information:</strong> This includes your name, email address, phone number, and other identifiers that you provide when using our Services.</li>
-          <li><strong>Usage Data:</strong> We collect information about how you interact with our Services, including the pages you visit, the time spent on those pages, and other diagnostic data.</li>
-          <li><strong>Device Information:</strong> We may collect information about your device, including its type, model, operating system, browser type, and IP address.</li>
-          <li><strong>Cookies and Similar Technologies:</strong> We use cookies and similar tracking technologies to track activity on our Services and hold certain information.</li>
+          <li><strong>Usage Data:</strong> We do not collect information about how you interact with our Services, including the pages you visit, the time spent on those pages, and other diagnostic data.</li>
+          <li><strong>Device Information:</strong> We do not collect information about your device, including its type, model, operating system, browser type, and IP address.</li>
+          <li><strong>Cookies and Similar Technologies:</strong> We do not use cookies and similar tracking technologies to track activity on our Services and hold certain information.</li>
         </ul>
         <p>We collect this information when you register on our site, fill out a form, subscribe to our newsletter, respond to a survey, or engage with our Services in any other way.</p>
       `,
@@ -181,9 +181,8 @@ export default function Privacy() {
       content: `
         <p class="mb-4">If you have any questions about this Privacy Policy, please contact us:</p>
         <ul class="list-disc pl-6 mb-4 space-y-2">
-          <li><strong>By email:</strong>Santoshrajbgp11@gmail.com</li>
-          <li><strong>By phone:</strong>+91 6204786984</li>
-          <li><strong>By Visiting:</strong>Bhagalpur Bihar </li>
+          <li><strong>Email:</strong>Santoshrajbgp11@gmail.com</li>
+          <li><strong>Office:</strong>Bhagalpur Bihar </li>
         </ul>
       `,
     },
@@ -232,7 +231,7 @@ export default function Privacy() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8"
             >
-              Last Updated: May 1, 2023
+              Last Updated: May 1, 2025
             </motion.p>
           </motion.div>
         </div>

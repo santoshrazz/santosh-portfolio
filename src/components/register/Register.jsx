@@ -21,6 +21,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { showAlert } from "@/constants";
 import { signIn } from "next-auth/react";
+import Image from "next/image";
 
 export default function RegisterForm() {
   const [name, setName] = useState("");
@@ -456,7 +457,14 @@ export default function RegisterForm() {
                   type="button"
                   className="w-full inline-flex justify-center py-2.5 px-4 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm bg-white dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/70"
                 >
-                  <Google size={20} />
+                  {/* <Google size={20} /> */}
+                  <Image
+                    src={"/assets/googleLogo.png"}
+                    alt="Google Icon"
+                    className="w-6 h-6"
+                    width={100}
+                    height={100}
+                  />
                 </motion.button>
                 <motion.button
                   variants={socialButtonVariants}
@@ -466,7 +474,14 @@ export default function RegisterForm() {
                   onClick={() => signInWithProvider("github")}
                   className="w-full inline-flex justify-center py-2.5 px-4 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm bg-white dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/70"
                 >
-                  <Github size={20} />
+                  {/* <Github size={20} /> */}
+                  <Image
+                    src={"/assets/githubLogo.png"}
+                    alt="Google Icon"
+                    className="w-6 h-6"
+                    width={100}
+                    height={100}
+                  />
                 </motion.button>
                 <motion.button
                   variants={socialButtonVariants}

@@ -25,6 +25,7 @@ export default function Navbar() {
     { name: "Blogs", href: "/blog" },
     { name: "Privacy", href: "/privacy" },
     { name: "Contact", href: "/contact" },
+    { name: "Notes", href: "/notes" },
   ];
 
   const menuVariants = {

@@ -94,9 +94,8 @@ export default function Skills() {
         </h3>
         <h2 className="text-3xl sm:text-4xl font-bold">Growing Over Times</h2>
         <p className="text-muted-foreground max-w-2xl">
-          Sed ut perspiciatis unde omnis iste natus Sed ut perspiciatis unde
-          omnis iste natus kobita tumi sopno charini hoye khbor nio na sit
-          voluptatem accusantium dolore.
+          Always learning, Santosh Kumar stays up-to-date with the latest trends
+          in web development and software engineering.
         </p>
       </div>
 

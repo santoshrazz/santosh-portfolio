@@ -24,7 +24,13 @@ const userSchema = new Schema({
     },
     providerId: {
         type: String
-    }
+    },
+    notes: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Notes"
+        }
+    ]
 }, {
     timestamps: true
 })
