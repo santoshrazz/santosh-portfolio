@@ -1,8 +1,7 @@
 "use server"
 import { cookies } from "next/headers";
 
-const API_BASE_URL = "http://localhost:3000"
-// process.env.BASE_URL
+const API_BASE_URL = process.env.BASE_URL
 export const fetchAllBlogs = async () => {
     try {
         const response = await fetch(API_BASE_URL + "/api/blog", {
