@@ -5,6 +5,7 @@ import parse from "html-react-parser";
 import Link from "next/link";
 import { formatDateTime } from "@/constants";
 import Image from "next/image";
+import Markdown from "react-markdown";
 
 function BlogDetails({ blog }) {
   if (!blog) {
@@ -68,10 +69,9 @@ function BlogDetails({ blog }) {
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
             {blog.excerpt}
           </p>
-          <div
-            className="text-gray-300 text-lg leading-relaxed mb-6 prose prose-xl dark:prose-invert"
-            dangerouslySetInnerHTML={{ __html: blog.description }}
-          ></div>
+          <div className="text-gray-300 text-lg leading-relaxed mb-6">
+            <Markdown>{blog.description}</Markdown>
+          </div>
         </div>
       </article>
     </div>

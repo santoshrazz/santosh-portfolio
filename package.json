@@ -40,6 +40,7 @@
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.16.0",
     "react-lottie": "^1.2.10",
+    "react-markdown": "^10.1.0",
     "shortid": "^2.2.17",
     "stream": "^0.0.3",
     "sweetalert2": "^11.19.1",
