@@ -73,7 +73,7 @@ export function LatestBlogs({ trendingBlogData }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {AllBlogs.map((blog) => (
+          {AllBlogs?.map((blog) => (
             <Card
               key={blog._id}
               className="group hover:shadow-lg transition-shadow duration-200"

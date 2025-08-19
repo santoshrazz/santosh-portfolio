@@ -5,23 +5,29 @@ import { motion } from "framer-motion";
 
 export default function ParticleBackground() {
   const [particles, setParticles] = useState([]);
+  const [particleTime, setParticleTime] = useState(7);
 
   useEffect(() => {
     const particleCount = 50; // Adjust this number to increase/decrease particles
     const newParticles = [];
 
     for (let i = 0; i < particleCount; i++) {
-      newParticles.push({
-        id: i,
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        size: Math.random() * 3 + 1, // Random size between 1 and 4
-        speedX: (Math.random() - 0.5) * 2, // Random speed in X direction
-        speedY: (Math.random() - 0.5) * 2, // Random speed in Y direction
-      });
+      if (typeof window !== "undefined") {
+        newParticles.push({
+          id: i,
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          size: Math.random() * 3 + 1, // Random size between 1 and 4
+          speedX: (Math.random() - 0.5) * 2, // Random speed in X direction
+          speedY: (Math.random() - 0.5) * 2, // Random speed in Y direction
+        });
+      }
     }
 
     setParticles(newParticles);
+    if (typeof window !== "undefined") {
+      setParticleTime(Math.random() * 5 + 5);
+    }
   }, []);
 
   return (
@@ -40,7 +46,7 @@ export default function ParticleBackground() {
             y: [particle.y, particle.y + particle.speedY * 100, particle.y],
           }}
           transition={{
-            duration: Math.random() * 5 + 5, // Random duration between 5 and 10 seconds
+            duration: particleTime, // Random duration between 5 and 10 seconds
             repeat: Infinity,
             repeatType: "reverse",
             ease: "easeInOut",
