@@ -20,12 +20,12 @@ const projects = [
     tags: ["Node.js", "Express.js", "Cloudinery", "Docker"],
   },
   {
-    title: "Coursera ",
+    title: "Roam Ripples ",
     description:
-      "A course Selling website for Students and teacher's . To buy and sell courses",
-    image: "/Course.jpg",
-    github: "https://github.com/santoshrazz",
-    demo: "https://demo.com",
+      "A B2B Tour and Travel Website That You can use for Trip booking.",
+    image: "https://roamripples.com/ror.png",
+    github: "https://github.com/santoshrazz/Roam-Of-Ripples",
+    demo: "https://roamripples.com/ror.png",
     tags: ["Next.js", "Node.js", "Fastify", "Aws", "Mongodb", "CloudFront"],
   },
   {
