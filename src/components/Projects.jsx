@@ -25,7 +25,7 @@ const projects = [
       "A B2B Tour and Travel Website That You can use for Trip booking.",
     image: "https://roamripples.com/ror.png",
     github: "https://github.com/santoshrazz/Roam-Of-Ripples",
-    demo: "https://roamripples.com/ror.png",
+    demo: "https://roamripples.com",
     tags: ["Next.js", "Node.js", "Fastify", "Aws", "Mongodb", "CloudFront"],
   },
   {

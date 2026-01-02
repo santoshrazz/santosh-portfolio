@@ -5,6 +5,7 @@ import React from "react";
 
 const page = async () => {
   const { data } = await fetchAllBlogs();
+  console.log("data", data);
   return (
     <div>
       <AllBlog blogData={data} />
